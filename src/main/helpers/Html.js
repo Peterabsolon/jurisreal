@@ -37,26 +37,26 @@ export default class Html extends Component {
         <body>
           <div id="content" dangerouslySetInnerHTML={{ __html: content }} />
           <script dangerouslySetInnerHTML={{ __html: `window.__data=${serialize(store.getState())};` }} charSet="UTF-8" />
-          <script src="https://code.jquery.com/jquery-2.2.4.min.js" />
-          <script src={assets.javascript.main} charSet="UTF-8" />
-          <script src="/dist/vendor/inspinia.js" type="text/javascript" />
-          <script src="/dist/vendor/bootstrap.min.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/metisMenu/jquery.metisMenu.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/slimscroll/jquery.slimscroll.min.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/flot/jquery.flot.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/flot/jquery.flot.tooltip.min.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/flot/jquery.flot.spline.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/flot/jquery.flot.resize.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/flot/jquery.flot.pie.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/peity/jquery.peity.min.js" type="text/javascript" />
-          <script src="/dist/vendor/inspinia.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/pace/pace.min.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/gritter/jquery.gritter.min.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/sparkline/jquery.sparkline.min.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/chartJs/Chart.min.js" type="text/javascript" />
-          <script src="/dist/vendor/plugins/toastr/toastr.min.js" type="text/javascript" />
         </body>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" />
+        <script src={assets.javascript.main} charSet="UTF-8" />
+        <script src="/dist/vendor/inspinia.js" type="text/javascript" />
+        <script src="/dist/vendor/bootstrap.min.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/metisMenu/jquery.metisMenu.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/slimscroll/jquery.slimscroll.min.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/flot/jquery.flot.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/flot/jquery.flot.tooltip.min.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/flot/jquery.flot.spline.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/flot/jquery.flot.resize.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/flot/jquery.flot.pie.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/peity/jquery.peity.min.js" type="text/javascript" />
+        <script src="/dist/vendor/inspinia.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/pace/pace.min.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/gritter/jquery.gritter.min.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/sparkline/jquery.sparkline.min.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/chartJs/Chart.min.js" type="text/javascript" />
+        <script src="/dist/vendor/plugins/toastr/toastr.min.js" type="text/javascript" />
       </html>
     )
   }
