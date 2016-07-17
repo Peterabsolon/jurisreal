@@ -80,7 +80,7 @@ export default class App extends Component {
     return (
       <div className="page__wrapper">
         <Helmet {...config.app.head} />
-        <div className="container">
+        <div>
           {this.props.children}
         </div>
         <Notification />

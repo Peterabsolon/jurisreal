@@ -7,6 +7,7 @@ import path from 'path'
 import http from 'http'
 import open from 'open'
 import basicAuth from 'basic-auth'
+import $ from 'jquery'
 
 /*
  * Views

@@ -55,7 +55,7 @@ export default store => {
       { /* Home (main) route */ }
       <IndexRoute component={Page.Home} />
 
-      <Route path="admin" component={Admin.Home} />
+      <Route path="admin" component={Admin.Page} />
 
       <Route path="auth">
         <Route path="login" component={Auth.Login} />

@@ -111,6 +111,7 @@
     "http-proxy": "^1.13.3",
     "invariant": "^2.2.1",
     "isparta-instrumenter-loader": "^1.0.0",
+    "jquery": "^3.1.0",
     "lru-memoize": "^1.0.1",
     "pg-promise": "^5.2.0",
     "piping": "^1.0.0-rc.1",
