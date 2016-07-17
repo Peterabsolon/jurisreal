@@ -22,7 +22,7 @@ module.exports = Object.assign({
   apiHost: process.env.APIHOST || 'localhost',
   apiPort: process.env.APIPORT,
   app: {
-    title: 'STRV React Template',
+    title: 'JurisReal',
     description: '---',
     head: {
       titleTemplate: '---',
