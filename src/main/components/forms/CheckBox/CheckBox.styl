@@ -1,0 +1,78 @@
+.form-control--checkbox
+  position relative
+
+  input[type='checkbox'], input[type='radio']
+    position absolute
+    width 0
+    height 0
+    visibility hidden
+    text-indent -9999px
+
+    & + .control-label
+      position relative
+      padding-left remify(35px)
+      display inline-block
+
+      &:before,
+      &:after
+        position absolute
+        content ''
+        display block
+        border-radius 50%
+        width 26px
+        height 26px
+        left 0
+        top -2px
+        cursor pointer
+        background-size 15px
+        background-position 50% 50%
+
+        animation-duration .15s
+        animation-timing-function ease-out
+        animation-iteration-count 1
+        animation-fill-mode forwards
+        transform-origin 50% 50%
+
+      &:before
+        background-color red
+        border 1px solid #E6EAED
+        animation-name checkboxChecked
+
+      &:after
+        animation-name checkboxUnchecked
+
+    &:checked + .control-label
+      // color $form-color-label-text
+
+      &:before, &:after
+        animation-duration .2s
+        animation-timing-function ease-out
+        animation-iteration-count 1
+        animation-fill-mode forwards
+        transform-origin 50% 50%
+
+      &:before
+        animation-name checkboxUnchecked
+
+      &:after
+        transition background-color ease-in-out 0.2s
+        background-color yellow
+        border-color yellow
+
+        animation-name checkboxChecked
+
+.group-checkbox
+  .form-control--checkbox
+    margin-bottom $form-spacing-unit
+
+@keyframes checkboxUnchecked
+  from
+    transform scale3d(1, 1, 1)
+  to
+    transform scale3d(0.8, 0.8, 0.8)
+
+@keyframes checkboxChecked
+  from
+    transform scale3d(0.8, 0.8, 0.8)
+  to
+    transform scale3d(1, 1, 1)

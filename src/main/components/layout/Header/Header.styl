@@ -1,0 +1,39 @@
+$page-header-height = 100px
+$page-header-logo-font-size = 30px
+$page-header-nav-font-size = 16px
+
+.page__header
+    background-color $brand-primary
+    color $color-white
+    height $page-header-height
+
+.navbar
+    
+    &__header
+        float left
+        
+    &__brand
+        height $page-header-height
+        line-height $page-header-height
+        padding ($grid-gutter-width / 2)
+        color white
+        text-decoration none
+        font-weight bold
+        set-font-size $page-header-logo-font-size
+    
+    &__nav
+        float right
+        height $page-header-height
+        line-height $page-header-height
+        
+    &__link
+        height $page-header-height
+        line-height $page-header-height
+        padding ($grid-gutter-width / 2)
+        color white
+        text-decoration none
+        set-font-size $page-header-nav-font-size
+        
+        &--active
+            border-top 2px solid white
+            border-bottom 2px solid white
