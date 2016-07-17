@@ -66,11 +66,12 @@ proxy.on('error', (error, req, res) => {
   res.end(JSON.stringify(json))
 })
 
-app.use('/admin/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../src/admin', 'index.html'))
-})
+// app.use('/admin/*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../src/admin', 'index.html'))
+// })
 
 app.use(mainView)
+// app.use('/admin', adminView)
 
 if (config.port) {
   server.listen(config.port, err => {

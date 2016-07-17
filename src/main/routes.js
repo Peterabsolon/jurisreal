@@ -4,6 +4,7 @@ import { isLoaded as isAuthLoaded, load as loadAuth } from 'main/redux/modules/a
 import App from './app'
 
 import * as Page from 'main/containers/pages'
+import * as Admin from 'main/containers/admin'
 import * as Auth from 'main/containers/auth'
 import { I18n } from 'react-i18nify'
 import translations from 'main/constants/i18n'
@@ -53,6 +54,8 @@ export default store => {
     <Route path="/" component={App}>
       { /* Home (main) route */ }
       <IndexRoute component={Page.Home} />
+
+      <Route path="admin" component={Admin.Home} />
 
       <Route path="auth">
         <Route path="login" component={Auth.Login} />

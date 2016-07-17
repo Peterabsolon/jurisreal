@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import { asyncConnect } from 'redux-connect'
 import { connect } from 'react-redux'
-import { isLoaded, load as loadDemoData } from 'main/redux/modules/demo'
-import { CircleLoader } from 'main/components/loaders'
+// import { isLoaded, load as loadDemoData } from 'main/redux/modules/demo'
+import { loadContacts } from 'main/redux/modules/contacts'
+// import { CircleLoader } from 'main/components/loaders'
 
-import PlanetsList from './Planets/PlanetsList'
+// import PlanetsList from './Planets/PlanetsList'
 // import { animate } from 'helpers/decorators'
 
 @asyncConnect([{
-  promise: ({ store: { dispatch, getState } }) => {
-    const result = !isLoaded(getState()) ? dispatch(loadDemoData()) : null
+  promise: ({ store: { dispatch } }) => {
+    // const result = !isLoaded(getState()) ? dispatch(loadDemoData()) : null
+
+    const result = dispatch(loadContacts())
 
     return __CLIENT__ ? null : result
   }
@@ -17,26 +20,31 @@ import PlanetsList from './Planets/PlanetsList'
 // @animate
 @connect(
   state => ({
-    demo: state.demo
+    // demo: state.demo
+    contacts: state.contacts
   })
 )
 export default class FetchSample extends Component {
   static propTypes = {
-    demo: React.PropTypes.object
+    contacts: React.PropTypes.object
   }
 
   render() {
-    const {
-      loading,
-      data
-    } = this.props.demo
+    // const {
+    //   loading,
+    //   data
+    // } = this.props.demo
+
+    console.log('yo', this.props.contacts)
 
     return (
       <div>
-        <h2>Planets</h2>
+        Yo
+
+        {/* <h2>Planets</h2>
         {loading && <CircleLoader size={50} />}
 
-        {data && !data.error && !loading && <PlanetsList data={data.results} />}
+        {data && !data.error && !loading && <PlanetsList data={data.results} />} */}
       </div>
     )
   }

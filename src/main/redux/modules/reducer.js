@@ -4,6 +4,7 @@ import { reducer as reduxAsyncConnect } from 'redux-connect'
 
 import auth from './auth'
 import demo from './demo'
+import contacts from './contacts'
 import appState from './appState'
 import { reducer as form } from 'redux-form'
 
@@ -13,5 +14,6 @@ export default combineReducers({
   appState,
   auth,
   form,
-  demo
+  demo,
+  contacts
 })

@@ -5,7 +5,6 @@ import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'main/redux/m
 import { push } from 'react-router-redux'
 import config from '../config'
 import { asyncConnect } from 'redux-connect'
-import { Header } from 'main/components/layout'
 import { Notification } from 'main/components/misc'
 
 @asyncConnect([{
@@ -75,13 +74,12 @@ export default class App extends Component {
 
   render() {
     // const {user} = this.props;
-    const { location: { pathname } } = this.props
-    const isFullscreen = this.isFullscreen(pathname)
+    // const { location: { pathname } } = this.props
+    // const isFullscreen = this.isFullscreen(pathname)
 
     return (
       <div className="page__wrapper">
         <Helmet {...config.app.head} />
-        {!isFullscreen && <Header />}
         <div className="container">
           {this.props.children}
         </div>
