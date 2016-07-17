@@ -127,6 +127,7 @@
     "redux-async-connect": "^1.0.0-rc4",
     "redux-connect": "^2.4.0",
     "redux-form": "^5.2.5",
+    "resource-router-middleware": "^0.6.0",
     "scroll-behavior": "^0.4.0",
     "serialize-javascript": "^1.3.0",
     "serve-favicon": "^2.3.0",
